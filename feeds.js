@@ -6,13 +6,7 @@ var calipso = require("lib/calipso"), sys = require('sys'), events = require('ev
 exports = module.exports = {
   init: init,
   route: route,
-  jobs: {getFeed:getFeed},
-  about: {
-    description: 'Module that exposes job functions to enable processing of RSS and Atom feeds.',
-    author: 'cliftonc',
-    version: '0.1.1',
-    home:'http://github.com/cliftonc/calipso'
-  }
+  jobs: {getFeed:getFeed} 
 };
 
 /**
@@ -62,7 +56,7 @@ function getFeed(args,next) {
   var contentType = args.contentType ? args.contentType : "Article";
 
   // Allow this only to have local scope
-  var feed = require('./lib/feed-expat');
+  var feed = require('./feeds.expat');
 
   var response = feed.parseURL(url, function(err,data) {
       
