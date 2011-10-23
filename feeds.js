@@ -153,13 +153,13 @@ function processAtomItem(item,taxonomy,contentType, next) {
       c.tags=[];
       c.status='published';
       c.alias = alias;
-      c.author = item.author ? item.author.name.text || 'feeds';
+      c.author = item.author ? item.author.name.text : 'feeds';
       c.taxonomy = taxonomy;
 
       // Extension fields (hack for github) - to fix later
       c.set('githubLink',item.link['@'].href);
       c.set('githubImage',item['media:thumbnail']['@'].url);
-      c.set('githubAuthorLink',item.author.uri.text);
+      c.set('githubAuthorLink',item.author ? item.author.uri.text : '');
 
       if(item.updated.text) {
         c.updated=new Date(item.updated.text);
