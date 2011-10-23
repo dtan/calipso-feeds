@@ -1,5 +1,6 @@
 {
   "name": "feeds",
+  "label": "Feed Imports",
   "description": "Module that exposes job functions to enable processing of RSS and Atom feeds.",
   "version": "0.2.0",
   "homepage": "http://calip.so",
