@@ -11,7 +11,7 @@
  * https://github.com/maqr/node-xml2js
  * 
  ******************************************************************************/
-var sys = require('sys'),  
+var util = require('util'),  
     events = require('events'),
     expat = require('node-expat');
 

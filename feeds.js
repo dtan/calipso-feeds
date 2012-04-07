@@ -3,8 +3,8 @@
  */
 var rootpath = process.cwd() + '/',
   path = require('path'),
+  util = require('util'),
   calipso = require(path.join(rootpath, 'lib/calipso')),
-  sys = require('sys'),
   events = require('events');
 
 exports = module.exports = {
@@ -330,5 +330,5 @@ function processRssItem(item,taxonomy,contentType, next) {
 /**
  * Parsers are event emitters
  */
-sys.inherits(AtomParser, events.EventEmitter);
-sys.inherits(RssParser, events.EventEmitter);
+util.inherits(AtomParser, events.EventEmitter);
+util.inherits(RssParser, events.EventEmitter);
